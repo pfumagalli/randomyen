@@ -8,6 +8,7 @@
       var step = 1;
       
       function flipit() {
+        if (interval != null) return;
         number = Math.floor((Math.random() * 4) + 10);
         interval = setInterval(coinize,25);
       }
@@ -27,6 +28,7 @@
         current = current + step;
         if (number == 0) {
           clearInterval(interval);
+          interval = null;
         }
       }
     </SCRIPT>
